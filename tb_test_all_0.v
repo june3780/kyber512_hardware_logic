@@ -1,0 +1,450 @@
+`timescale 1ns / 1ps
+module tb_TOP_KEYGEN();
+
+  localparam  SEED    = 256'h7C9935A0B07694AA0C6D10E4DB6B1ADD2FD81A25CCB148032DCD739936737F2D;
+  localparam  RHO    = 256'h65EAFD465FC64A0C5F8F3F9003489415899D59A543D8208C54A3166529B53922;
+  localparam  SIGMA    = 256'hABB274A92ACEE034D3BAEE5C7BFAEDC2A7FAAAC404F37C9A3B15BCB3CFF80803;
+
+
+  localparam  A_00    = {
+             192'h02D_0CB_841_54F_9C0_995_99B_29D_300_B1D_040_C3C_30D_5CE_493_93C,
+             192'h5B2_8E2_114_2C1_9E4_A00_35E_4FA_4DA_B10_7B5_6AC_9AF_823_01F_052,
+             192'h979_99E_962_AAB_1A7_70F_122_2FE_CA0_901_125_430_06A_275_872_537,
+             192'h4C7_306_536_C38_169_35D_015_3EA_85B_940_87E_506_47C_048_6AB_854,
+             192'h42A_518_BDD_981_6F4_2D5_B02_3B1_52D_6FC_A5B_ACF_9B0_5CF_189_3ED,
+             192'hCDC_6E7_93E_AE8_5EB_A7A_A00_7FE_274_792_725_489_45B_11D_3C7_04B,
+             192'h6CE_B4E_A36_A4B_960_66D_205_9B9_023_5D3_C05_C53_41C_249_B1C_C80,
+             192'hCFA_9D9_A44_0B4_0B2_80B_90F_585_023_5D7_29C_941_66E_C8A_6B0_C54,
+             192'h0A5_2D9_061_622_386_81E_3AD_115_302_441_A53_4D6_417_7E9_349_69C,
+             192'hAA7_203_765_70F_131_56D_0CE_833_6FE_0BF_B78_064_6BC_6DA_1D2_387,
+             192'h63A_02A_C6A_1C2_CF4_53B_BF1_8B8_216_795_726_A78_9DA_821_20F_2F3,
+             192'hCF0_740_204_BC5_10C_AFE_91C_1AB_02E_702_985_A0E_383_CA1_473_67D,
+             192'h4AB_C91_15B_1C2_1FC_68C_89A_BAC_AAE_A89_558_864_51F_353_266_B74,
+             192'h10A_18D_1D2_24A_11E_96B_558_142_039_799_A6E_AA8_B8B_C6E_B8C_C23,
+             192'h486_6AB_0EB_58C_391_01B_49B_331_4CE_C9C_0CD_A60_306_325_86F_8AE,
+             192'h23C_4F7_85F_062_C5D_C90_84A_C14_8B5_95C_0AE_C70_BEE_A6D_12E_0E2
+             };
+
+  localparam  A_01    = {
+             192'h2CB_BBD_814_7FA_0F3_C04_6CD_C12_647_B61_922_31E_CF7_2BF_00D_C6F,
+             192'h8F6_482_0AB_8EA_7FD_877_B8F_A78_409_027_0AC_5AB_2FA_728_86A_A6E,
+             192'h76F_31A_651_7FA_89F_B5C_A1B_710_243_5E2_A24_93D_325_565_744_A85,
+             192'h85E_04C_324_681_191_BA1_825_6A5_45B_082_A87_AA5_279_922_4FE_BF2,
+             192'h46F_55C_615_4C3_1F1_C79_5E1_7D8_257_425_668_097_05C_349_B4C_075,
+             192'h0B6_66B_4FC_417_059_6D8_0C7_82E_949_BCF_901_640_14E_38A_CCC_BFE,
+             192'h4D4_92E_210_5C9_A7F_BED_093_A9D_CD1_1B8_B38_59A_8B5_8A7_567_896,
+             192'h047_34C_A68_10C_AA1_244_C04_BF6_800_364_373_73E_93E_702_493_8CC,
+             192'h318_555_958_887_90A_8C6_A9C_395_101_3D3_654_492_302_0B7_B5F_59B,
+             192'h979_35A_3DB_910_C41_947_390_B7B_AF7_BA1_52D_684_661_583_A2F_6F8,
+             192'hCD8_B7F_3E7_CCB_8F2_922_2AA_32A_8A3_A47_41F_036_784_353_C8D_836,
+             192'hA73_1CC_277_753_8F6_9FF_394_94A_B4A_287_1F0_21A_B1D_A88_427_040,
+             192'h486_9E9_B79_735_8A9_5A5_262_A42_CCC_CCC_39C_9B0_71B_CEF_CF3_8FB,
+             192'hB3A_B24_0E5_476_647_731_657_B49_9A1_B10_AB6_3CD_798_B60_183_336,
+             192'hA8F_47A_C08_B14_411_2DD_65A_78F_7B2_4FF_966_641_026_9C6_4FD_344,
+             192'h007_315_6FD_0C3_071_61F_3F0_A59_4A5_86B_24E_2C4_8BB_367_56B_4AB
+             };
+
+  localparam  A_10    = {
+             192'h572_3D8_75B_14F_C6A_3B5_473_B1B_93C_02C_0FF_035_41B_719_291_BEC,
+             192'h0A7_209_A96_CE3_C36_539_225_5C0_041_A49_1EE_3D7_7FD_25D_353_142,
+             192'h7F4_B59_70A_730_086_AD1_2F4_700_A7D_AF3_7FB_17B_4E0_519_0AD_CBA,
+             192'h84F_6F2_058_C35_9A3_37D_435_BA5_5DB_AB8_930_83A_9F8_3B6_2A1_4D4,
+             192'h3E6_C3A_7E9_CD5_888_C98_1AC_C8D_270_BF5_A6F_B2E_79F_276_BF5_359,
+             192'h7B4_1BF_CDD_A71_116_1C6_4F5_0F0_7CB_A30_79C_9A9_8E2_098_420_40D,
+             192'h5EA_647_8F1_5B1_6E2_689_C7F_6DF_2E2_070_997_9D8_423_7BE_6B2_935,
+             192'h24C_C28_664_406_817_729_76D_31E_863_9D0_C99_B13_0BC_6F2_9A2_667,
+             192'h280_1E7_60C_110_205_821_56E_76A_A89_CBE_7D4_086_288_44D_A9E_4BE,
+             192'hB5A_333_C1E_897_CA6_B65_764_4AC_71A_306_0D6_815_10C_725_60A_A5B,
+             192'h2BC_9EF_950_62A_A3E_249_44B_4BE_472_BE5_A11_4A0_0E4_32B_BE2_5DB,
+             192'h9BB_CE4_553_877_577_C24_56E_BEA_105_95C_A4C_7AD_629_7B1_A1A_250,
+             192'h9E7_5E2_0C5_9A2_7EF_18C_CC0_39F_610_308_CEE_C3A_AA5_B50_B64_4F4,
+             192'hBC2_BED_565_11A_70E_6B1_253_642_33C_45F_95A_654_039_BDA_2BD_177,
+             192'h018_9EC_B54_AF8_C55_763_398_5C4_1B5_926_9FC_3B9_BDB_72D_AD1_77B,
+             192'hA21_C95_C71_C07_CF2_374_39A_4B5_55D_42A_0B8_6A1_A85_8C5_707_CFB
+             };
+
+  localparam  A_11    = {
+             192'h2CD_BD5_80D_151_4CD_C84_214_AF2_A02_23D_654_715_8D4_5DA_65E_3FD,
+             192'h72D_395_7F9_46D_417_390_4E8_385_739_836_3F5_CBE_3B7_936_9E3_0C3,
+             192'h5F2_131_8B2_627_810_BB5_4F9_A48_499_5B7_140_C04_63F_411_389_C5B,
+             192'hAF6_7D2_9E9_660_BAD_8B7_846_CBB_9CF_403_701_268_247_C9D_0A7_1BF,
+             192'h4ED_B9A_573_29C_7CD_C0F_87D_C90_7C6_CE4_6C5_4C7_44E_6BE_B1B_699,
+             192'hBD6_56A_02F_3D6_9A7_864_0FA_5EF_8CC_5C6_368_25F_3E8_7C0_22F_A08,
+             192'h75E_3AF_023_8E2_BB7_598_637_20C_5D6_693_50A_A28_CFF_552_BC0_8AE,
+             192'h124_9E7_6BE_AAB_0BE_5CD_875_42A_352_6B4_A24_909_804_755_06F_CCE,
+             192'h367_684_7D3_1AC_2F2_0BD_CC0_C59_910_2C7_940_B8E_404_0DE_8E3_36D,
+             192'h692_214_C3B_8E9_705_B67_187_034_B85_C4C_5CB_30A_830_528_4C8_87B,
+             192'h78F_18C_ABE_267_93C_BE6_8F3_6AE_A85_C03_3DB_56C_BE7_386_6F8_719,
+             192'h2FA_397_034_049_662_03C_34B_6C9_11C_CD4_C7A_49A_466_4A8_4A5_ABF,
+             192'h95B_589_3D0_C53_1A9_382_2CB_B76_73B_C26_C5B_C62_B09_90F_695_395,
+             192'h327_9E6_B22_262_306_349_7E9_9B3_713_CDB_51B_AFF_3F2_3A8_21C_405,
+             192'hB02_AAB_89C_5C2_8CC_919_1B3_466_780_5D7_AA3_6B0_398_2E2_494_7D4,
+             192'hC5F_5A4_B29_BF9_9A0_15F_7A5_825_7B3_AA8_85C_187_6E4_974_29D_685
+             };
+
+  localparam  S_0    = {
+             192'h001_001_D00_CFF_001_001_D00_000_001_000_000_D00_CFF_D00_CFF_D00,
+             192'hD00_D00_000_000_001_001_D00_001_D00_001_002_D00_002_001_D00_D00,
+             192'h000_002_001_001_000_001_001_001_D00_D00_002_001_CFF_CFF_002_D00,
+             192'h001_001_D00_CFF_001_D00_000_000_D00_D00_002_002_D00_CFF_001_000,
+             192'hCFF_000_000_D00_D00_001_D00_001_000_001_000_D00_000_001_000_000,
+             192'h000_000_000_001_D00_D00_000_D00_000_000_000_D00_000_002_000_002,
+             192'hD00_001_001_D00_000_000_D00_000_000_CFE_000_CFF_000_000_000_000,
+             192'h001_000_002_000_000_000_D00_D00_000_000_001_001_001_D00_001_CFE,
+             192'hCFF_000_CFF_000_D00_001_D00_001_001_D00_D00_000_000_001_002_D00,
+             192'h001_002_CFF_001_001_002_CFF_D00_001_002_002_001_002_D00_001_001,
+             192'h001_CFF_002_CFF_001_001_001_D00_000_001_D00_000_000_001_000_002,
+             192'h000_000_D00_CFF_001_000_000_002_D00_D00_D00_001_D00_000_000_000,
+             192'h001_000_001_001_D00_CFF_000_CFF_001_002_000_000_001_D00_D00_D00,
+             192'h001_000_002_001_D00_000_001_002_001_001_D00_000_CFF_D00_002_D00,
+             192'hCFE_001_001_D00_001_000_000_CFF_002_000_002_001_000_000_002_001,
+             192'hD00_001_D00_001_000_D00_CFF_001_001_001_D00_003_001_000_001_000
+             };
+
+  localparam  S_1    = {
+             192'h002_000_000_D00_000_001_001_002_D00_001_D00_001_002_002_002_001,
+             192'h002_D00_CFF_001_000_002_003_001_000_000_000_002_D00_000_CFF_001,
+             192'h000_000_D00_D00_000_001_001_002_000_D00_001_D00_D00_D00_000_CFE,
+             192'h001_CFE_000_002_D00_002_001_000_000_000_001_D00_CFF_D00_001_CFF,
+             192'hD00_003_001_CFE_D00_000_D00_D00_CFE_D00_D00_D00_003_CFF_000_001,
+             192'h001_002_000_002_001_001_D00_000_000_000_D00_001_001_D00_001_001,
+             192'h000_000_001_D00_001_D00_001_CFF_D00_D00_001_001_001_D00_001_D00,
+             192'h000_001_000_001_001_000_D00_002_002_001_002_D00_D00_001_002_000,
+             192'h000_000_000_001_D00_000_000_000_D00_000_D00_000_D00_002_000_000,
+             192'h002_D00_000_001_CFF_001_000_D00_001_000_CFE_002_CFF_001_000_002,
+             192'h000_000_CFF_002_002_D00_000_CFF_D00_CFF_D00_CFF_CFF_002_000_001,
+             192'hCFF_000_000_000_001_001_000_000_000_D00_001_001_CFF_001_000_000,
+             192'h000_002_000_CFF_CFF_001_000_001_D00_D00_CFF_000_000_000_D00_000,
+             192'h000_D00_001_000_D00_002_001_001_002_000_002_001_000_D00_001_D00,
+             192'h000_000_D00_000_001_D00_D00_001_D00_000_000_000_000_D00_000_001,
+             192'h000_001_001_CFF_D00_CFF_000_001_000_000_CFF_000_000_000_D00_000
+             };
+
+  localparam  E_0    = {
+             192'h001_001_001_000_000_002_D00_D00_CFE_D00_000_002_001_000_CFE_002,
+             192'hD00_D00_D00_CFF_001_001_000_CFF_D00_CFF_000_002_D00_D00_001_CFF,
+             192'h002_000_000_002_001_000_D00_000_000_000_D00_001_002_D00_000_000,
+             192'h000_D00_D00_CFF_CFF_D00_CFF_001_D00_D00_D00_CFF_000_001_001_001,
+             192'h000_000_D00_002_001_001_000_002_002_000_000_000_CFE_002_000_001,
+             192'h000_D00_D00_001_001_CFF_001_D00_002_D00_000_001_CFF_001_001_001,
+             192'hCFF_D00_000_D00_000_001_D00_000_001_000_D00_002_001_001_D00_000,
+             192'h001_002_D00_D00_001_D00_001_001_CFF_D00_001_001_D00_CFE_001_000,
+             192'h001_002_D00_001_000_000_000_D00_001_D00_000_000_000_001_001_D00,
+             192'h001_000_001_000_001_000_001_000_D00_002_001_000_000_002_001_001,
+             192'h001_002_000_D00_D00_002_001_002_002_001_002_000_000_000_000_000,
+             192'h000_D00_D00_CFF_000_001_002_D00_D00_000_D00_CFF_001_CFF_001_000,
+             192'h000_001_000_002_D00_000_001_001_CFF_D00_001_000_000_CFF_003_001,
+             192'hD00_CFF_000_D00_000_000_D00_002_002_000_000_000_D00_D00_D00_001,
+             192'h000_000_D00_002_000_D00_D00_001_001_000_000_002_000_001_000_001,
+             192'h001_000_000_002_000_000_000_CFF_D00_000_000_003_000_D00_001_001
+             };
+
+  localparam  E_1    = {
+             192'h000_001_000_CFF_001_D00_000_001_CFF_D00_001_000_000_D00_000_000,
+             192'h000_CFF_001_002_002_002_000_001_CFF_D00_003_000_D00_000_000_000,
+             192'hCFF_D00_001_003_D00_000_000_001_000_000_000_000_CFE_001_001_D00,
+             192'h001_001_CFF_001_001_001_D00_002_D00_D00_002_CFE_001_000_D00_D00,
+             192'h001_002_001_000_D00_001_001_001_000_000_000_000_002_D00_D00_D00,
+             192'h000_000_001_000_000_000_000_001_001_000_002_002_001_001_D00_000,
+             192'h000_000_001_CFF_001_000_D00_CFF_CFF_000_000_002_000_001_D00_001,
+             192'h001_003_001_000_003_001_D00_001_002_001_001_D00_000_CFF_001_D00,
+             192'hD00_D00_002_001_000_CFF_D00_D00_D00_001_002_001_001_001_001_001,
+             192'h000_001_D00_000_000_000_002_D00_002_001_000_002_000_001_CFF_000,
+             192'hD00_002_CFF_D00_001_000_D00_CFF_000_000_002_002_CFF_002_000_CFF,
+             192'h001_CFF_001_001_000_001_CFF_001_000_000_000_001_001_002_000_000,
+             192'hCFF_D00_D00_CFF_CFE_D00_000_D00_D00_CFF_001_CFE_001_001_002_001,
+             192'h000_D00_000_D00_D00_001_CFF_001_001_000_D00_000_D00_D00_D00_001,
+             192'hD00_001_D00_002_D00_000_CFF_002_000_001_D00_000_CFF_002_D00_000,
+             192'h001_001_001_001_000_D00_003_CFF_D00_000_002_001_001_D00_000_D00
+             };
+
+  localparam  S_NTT_0    = {
+             192'h1A2_97F_41E_B23_95D_9A4_716_452_63D_8DD_073_301_C5A_097_340_6A9,
+             192'h8B2_A19_8B1_994_1CA_0ED_3E4_290_BA3_A6A_9DC_A58_359_084_935_B9E,
+             192'hCE3_25B_60E_CAE_2BC_522_2C0_249_A93_637_55A_A76_9D6_462_ABD_4C7,
+             192'h979_753_538_19D_23F_C74_90B_193_1DA_225_9C5_A7D_93E_B3D_65A_15A,
+             192'h9B1_80C_473_022_665_6A7_B67_B93_0DF_AC7_2A9_1A6_0E7_0DD_79C_C31,
+             192'h420_8A8_15C_1E6_7F7_12F_990_0BB_805_6E2_06D_CB4_056_37B_9DF_2A1,
+             192'h998_00F_B35_A00_CE7_51D_C96_16E_2BE_362_ADC_2A8_37A_09B_8C3_6CF,
+             192'h63E_91A_A8E_8E7_440_5B8_B4F_B20_698_433_704_64F_152_888_579_63E,
+             192'h96E_1F6_AD9_99E_2A8_91B_B45_211_03D_CE8_B47_B82_21D_A56_6B6_9A7,
+             192'h973_BA0_069_8A1_260_033_8FC_806_9C0_6C5_ABD_61B_756_2EA_8D3_18D,
+             192'h3C1_6A8_50B_9BA_A6D_7AE_B45_75F_559_76F_301_CFF_761_64F_772_3C4,
+             192'h4C9_310_49F_4DB_081_442_A34_415_42E_338_952_22B_785_75D_109_5F8,
+             192'hA76_6BB_97A_C55_5E1_CAB_C5E_CB4_CE6_0F0_9F7_3F0_2D7_490_C0B_81D,
+             192'h9E2_A8B_1B3_36D_A13_67F_9DE_2EC_00E_65F_A87_06D_CE6_997_802_AFE,
+             192'h637_261_111_BA7_53E_B7D_1F1_603_019_630_3FA_01B_C7D_C46_40D_77E,
+             192'h336_620_65F_407_1FD_6EE_333_5AF_7DF_893_146_4C7_A99_702_2B8_96C
+             };
+
+  localparam  S_NTT_1    = {
+             192'h92A_3A2_07B_103_55F_A76_538_818_0D8_974_5DE_3C2_53C_B09_742_363,
+             192'h9CC_65C_999_261_93A_6B5_361_CE0_46F_538_32F_72B_C1F_3B1_22B_8DC,
+             192'h012_194_AC7_B3A_000_9E0_1CF_C06_761_239_602_3CE_1D8_63E_9C2_52D,
+             192'h8E2_5FA_61F_5E1_AA0_0FE_74C_9DC_C12_A0A_7E9_3F8_2D9_948_7AB_0A2,
+             192'h0E2_858_A6F_0C2_36F_972_B9E_455_2DE_9A6_95E_A57_812_71A_98F_686,
+             192'h3A7_0B3_45C_432_14E_BCA_2EC_692_754_00E_742_B62_B03_93C_73A_082,
+             192'h230_840_1AF_425_C0A_375_9D9_335_20E_057_231_597_4F4_4EB_400_594,
+             192'h86A_4E9_9A6_AB3_493_ADC_337_8C1_399_2B8_8AE_AAB_574_542_562_9FA,
+             192'hADC_C58_C62_0F5_6BA_76D_C07_C1D_8F4_920_1C0_097_8C4_8B7_0EB_35A,
+             192'hBD7_09C_CB1_37E_BBC_B5E_5E8_BBA_20D_68A_953_C91_0CD_C6C_992_893,
+             192'h277_345_949_733_8A1_040_362_73C_0CC_B84_0B9_595_C44_744_24A_58B,
+             192'h4E2_758_3F2_213_43C_7C3_BDC_420_5BD_411_BEC_971_4C9_B92_28E_7E9,
+             192'h82B_5D8_9E4_7D3_54B_B7C_B36_9C3_D00_2CE_484_9D3_B59_609_6E4_2D9,
+             192'hB82_7E7_9D1_7A9_ADD_4DF_6BF_992_080_26B_3B0_185_114_B62_08C_BF5,
+             192'h966_52C_CF4_844_4DB_24F_CCE_044_550_42F_226_940_AF4_2E5_292_462,
+             192'h317_99F_6F3_BC1_931_69B_877_C1F_1BE_8E5_320_7A0_6D1_B58_3A0_CAC
+             };
+
+  localparam  E_NTT_0    = {
+             192'h872_0AC_09D_B36_A1B_A69_A08_AFA_A52_2BD_02E_70B_307_A18_9A1_310,
+             192'hC64_B87_75E_083_608_1EB_360_7C5_453_3BC_41C_161_3FF_C37_66F_5E8,
+             192'h62A_985_B7E_A42_02A_210_29A_8D1_60A_493_687_9DF_BAE_3B3_393_B49,
+             192'h05D_B5F_958_049_689_608_22D_98C_A28_112_001_9B1_C52_C29_533_C61,
+             192'hCD7_200_94A_4FE_27C_2AE_3FD_525_BCE_A1E_29F_3BA_949_AE8_B61_2FA,
+             192'h9E9_109_3E1_4DB_7B7_7C9_B55_3AC_735_78C_296_44B_AE4_C83_9C9_84F,
+             192'h8A3_B1A_625_26E_4B1_386_8B4_A7F_C93_833_261_7B6_4AB_C93_501_B7F,
+             192'hC20_CF2_995_3CA_0CD_3F8_071_98D_598_47F_72B_AFD_ADD_A79_52B_24D,
+             192'hA7A_906_06C_50A_A0E_827_493_7C1_113_4F3_1FA_830_B44_4EA_8E9_904,
+             192'hB67_2AE_54E_963_17D_BC1_AD2_64B_B10_6EE_5C5_816_8FE_46D_ABA_CC2,
+             192'h1F6_5F9_45D_2A8_29D_909_1C1_821_39C_A42_BAA_C07_B3B_1D7_CD3_00D,
+             192'h1A7_6D5_07E_8FA_05B_55F_15B_AF8_06A_BA3_B55_8A2_B7E_526_668_C50,
+             192'h742_CEF_187_73D_1B3_AF7_8D1_085_5D2_B59_1C3_9E7_030_1D7_8AB_C51,
+             192'h3AD_2AB_3D3_02A_798_960_707_589_8F6_A89_84F_BF2_1BE_B93_126_CBF,
+             192'h428_80B_2E1_8A2_451_3D4_B37_628_729_381_24C_271_46E_473_C90_3DD,
+             192'hBD3_438_93E_319_35E_37F_93C_61D_46C_5EA_A35_B19_469_6C8_2E7_2F3
+             };
+
+  localparam  E_NTT_1    = {
+             192'h662_A3E_4E0_33E_591_5D5_4EF_831_727_3C3_2FF_438_5EE_917_873_AA9,
+             192'h23E_3A5_0E2_C87_93B_A5B_BEE_CF0_C00_CEE_459_01E_3A6_BBB_4DF_5BE,
+             192'h3D0_0D6_B1C_476_B77_2F2_4DD_775_AAE_5C2_295_1AD_95F_A94_8D0_642,
+             192'h83E_746_04A_699_A76_B77_CFF_0DC_CD7_227_989_BA7_B90_A06_C5B_B31,
+             192'h07A_319_2B4_552_C74_C1A_738_969_7AD_0F9_5D6_013_A35_663_7A8_2B3,
+             192'h8B2_194_434_97C_AE2_4D6_CD4_CA8_0C8_544_41A_750_7E0_377_C9A_39B,
+             192'h2AE_28B_1DA_3C9_A95_115_108_381_BE4_B63_792_AFB_866_A94_96C_1C5,
+             192'h15E_AEA_B1B_106_324_49D_2BF_208_629_7F6_AD4_512_AAB_0A1_CF8_072,
+             192'h0EE_15D_7C7_1B9_56F_8C0_C5B_910_6F8_3ED_110_505_B58_1BE_9D4_866,
+             192'h8B1_A52_B39_B02_9BA_B74_974_609_A30_1C4_41C_BA5_33C_21C_890_2C1,
+             192'h295_A90_A91_8FE_34E_12B_2B5_B1E_A12_6D8_C2B_A47_648_66B_8CA_20B,
+             192'h951_0FC_8E6_73F_917_C13_0DF_3FF_0CE_5A3_A94_C84_198_B18_59F_CD7,
+             192'h00E_2E1_CB6_47C_92A_2E4_20F_B8F_3B0_AC0_080_240_861_854_68B_BEA,
+             192'h7C7_B5F_B43_C92_888_083_342_405_BE2_6BA_BB8_65D_195_CC9_AF2_9F7,
+             192'h4C3_3A4_682_8A1_92C_6DF_395_5AF_439_A19_921_3D6_650_090_312_379,
+             192'h0BB_707_301_B67_4FB_ACF_155_151_32D_ADD_5F0_8DF_BDF_820_746_A4F
+             };
+
+  localparam  PK_0    = {
+             192'h56B_777_370_2DF_5DF_49B_CA3_828_391_66F_8A4_1DC_7CF_9BA_2B6_3F3,
+             192'hBC6_BB7_7AE_574_2BE_C02_42F_CD5_133_059_97B_5C9_A1A_2EC_B4F_CDF,
+             192'hA1D_7D3_BF6_852_BCE_791_736_0F8_C76_684_706_91E_7F8_590_058_B4C,
+             192'h0AB_B43_9F1_77F_BF1_C6A_A70_9CB_1F9_8C7_8CB_8FA_050_35B_72F_4C2,
+             192'hB32_0F1_C82_033_4D3_947_45F_6FE_264_77B_107_206_934_79F_26B_02F,
+             192'hBA1_713_2F9_052_8A7_B5C_36F_19E_8B8_0AE_752_843_022_81B_242_183,
+             192'h0AA_1C8_742_C3F_054_1CD_3F4_B4C_9CB_1C8_7FC_2AC_558_717_B7F_269,
+             192'h11C_487_859_107_74A_026_5A2_AD0_15F_4B7_75C_7D5_73A_19C_C99_413,
+             192'h004_064_2CE_C96_02A_473_0C0_CBF_836_43F_84B_7BA_6E4_95D_8F2_023,
+             192'h9F7_0A6_AD2_AE4_A0B_770_55B_2C9_B8D_C27_C29_714_416_A13_0A1_168,
+             192'h94D_C27_55C_8E5_663_091_513_1E5_BFD_B56_9B5_6B9_B64_603_59B_C9D,
+             192'h63D_14A_C04_5E7_438_3A6_5B5_4FF_37A_21C_4EF_5DA_AFE_0EB_912_700,
+             192'hB6C_6A5_72E_36B_A70_74A_3B0_5A1_36A_26A_7F0_924_444_1DE_309_CD1,
+             192'h07F_8FE_7D2_258_25A_36C_5CB_53C_06A_C51_AEF_634_7D1_189_679_74D,
+             192'h368_CE0_BB5_046_3FA_498_5F5_9C0_47D_566_CEC_97A_AB6_356_8C6_956,
+             192'hAA1_1D7_88A_415_76F_605_A3D_316_3CC_9CF_7DB_B7C_676_40E_CE5_A11
+             };
+
+  localparam  PK_1    = {
+             192'hBB8_751_B42_239_ACD_838_7B0_37E_703_23E_168_54B_A6B_8FE_392_686,
+             192'h5A4_592_8E9_3F6_3DC_1C2_238_1BC_B2C_24A_737_0B4_CF0_C6C_5DF_B46,
+             192'h367_1CD_95C_2B9_524_C02_378_843_888_0A2_51B_3D7_78C_927_338_7FD,
+             192'hCBF_5F8_2D7_A5B_643_2FD_C2B_0EF_8B0_541_B0A_040_A25_113_40E_A19,
+             192'h04F_040_13D_9D2_286_958_98D_0C7_BD6_7E6_5C4_85E_003_46D_6CB_B06,
+             192'h4A3_1F3_B24_418_B6D_BE2_4E7_091_95C_BB0_3FF_CD4_46B_CFE_729_1A0,
+             192'h9E9_1CF_813_45B_7E5_ADC_5B8_73F_643_5C4_1C9_BA8_B2C_617_04D_65D,
+             192'hCE9_B6A_34C_AE4_15C_92E_613_249_CAB_843_511_5A7_61A_C84_731_3ED,
+             192'h59B_B03_3FF_620_AD7_323_9D4_9D1_71C_9B3_2C7_9A7_598_159_CFB_A6A,
+             192'hAF2_C6F_7DE_69A_C73_7D6_810_565_B8E_C9C_390_4FB_783_31B_9ED_09C,
+             192'h24D_706_6B3_6AC_539_136_80E_75E_999_8B2_927_B3D_6AF_C7D_136_9F4,
+             192'h132_7DC_190_80E_079_966_040_B57_98A_A2E_815_102_1F6_4C6_2FC_756,
+             192'hB39_591_A44_992_17A_A74_616_B11_234_16F_234_472_BAE_C89_053_646,
+             192'h10E_68F_AFA_790_546_B45_C52_AD8_75F_594_988_5B6_327_BAF_19A_4C7,
+             192'h330_B9B_6DC_46E_629_A0E_79E_35F_3E1_B67_85B_188_73C_A04_318_93A,
+             192'hCA8_033_5BA_A1F_361_6C8_BB0_019_539_BC5_02F_394_0F1_905_C13_318
+             };
+
+	reg     		i_clk;
+    	reg     		i_rstn;
+    	reg     		i_start;
+    	reg	[255:0]		i_seed;
+	wire    [6143:0]	o_PublicKey;
+	wire    [6143:0]	o_SecretKey;
+	wire			o_done;
+
+	integer file;
+
+	always #5 i_clk = ~i_clk;
+
+	TOP_KEYGEN	mk0(	.i_clk(i_clk), .i_rstn(i_rstn), .i_start(i_start), .i_seed(i_seed), .o_PublicKey(o_PublicKey) ,.o_SecretKey(o_SecretKey), .o_done(o_done) );
+
+    	
+	initial 
+    	begin
+    	i_clk = 1'd0; 	i_rstn = 1'd0;	i_start = 1'd0;	i_seed = 256'd0;
+    	#14 		i_rstn = 1'd1; 	
+	#6				i_start = 1'd1; i_seed = SEED;
+//	#185000	$finish;
+    	end
+	
+	initial
+	begin
+	wait(o_done==1)
+	#20
+	$finish;
+	$fclose(file);
+	end
+	
+
+	// G result
+	initial
+	begin
+	file = $fopen("Simulation_Result.txt","a");
+	$fwrite(file, "seed of G function :\n %h\n\n", SEED);			// SEED
+	wait(mk0.G_out_done);
+	#15;
+	$fwrite(file, "rho ( seed of Parse :\n %h\n", mk0.c_rho);		// rho
+		if(mk0.c_rho == RHO)		$fwrite(file, " rho : SUCCESS\n\n");
+		else				$fwrite(file, " rho : FAIL\n\n");
+	
+	$fwrite(file, "sigma ( seed of CBD :\n %h\n", mk0.c_sigma);		// sigma
+		if(mk0.c_sigma == SIGMA)	$fwrite(file, " sigma : SUCCESS\n\n");
+		else				$fwrite(file, " sigma : FAIL\n\n");
+	end	
+
+	reg	[1:0]	temp_cnt_CBD;
+	reg	[1:0]	temp_cnt_Parse;
+	reg	[1:0]	temp_cnt_NTT;
+//	reg	[1:0]	temp_cnt_Basemul;
+	reg	[1:0]	temp_cnt_Add;
+	initial
+	begin
+	temp_cnt_CBD = 2'd0;	temp_cnt_Parse = 2'd0;	temp_cnt_NTT = 2'd0;	temp_cnt_Add = 2'd0;	// temp_cnt_Basemul = 2'd0;
+	end
+
+	// CBD result
+	always @(posedge mk0.CBD_out_done)
+	begin
+	temp_cnt_CBD=mk0.c_cnt_CBD;
+	#15;
+		if(temp_cnt_CBD==2'd0)
+		begin
+		$fwrite(file, "SecretKey_0 sampled from CBD :\n %h\n", mk0.c_s_0);
+			if(mk0.c_s_0 ==	S_0)	$fwrite(file, " S_0 : SUCCESS\n\n");
+			else			$fwrite(file, " S_0 : FAIL\n\n");		
+		end
+		else if(temp_cnt_CBD==2'd1)
+		begin
+		$fwrite(file, "SecretKey_1 sampled from CBD :\n %h\n", mk0.c_s_1);
+			if(mk0.c_s_1 ==	S_1)	$fwrite(file, " S_1 : SUCCESS\n\n");
+			else			$fwrite(file, " S_1 : FAIL\n\n");	
+		end
+		else if(temp_cnt_CBD==2'd2)
+		begin
+		$fwrite(file, "Error_0 sampled from CBD :\n %h\n", mk0.c_e_0);
+			if(mk0.c_e_0 ==	E_0)	$fwrite(file, " E_0 : SUCCESS\n\n");
+			else			$fwrite(file, " E_0 : FAIL\n\n");	
+		end
+		else
+		begin
+		$fwrite(file, "Error_1 sampled from CBD :\n %h\n", mk0.c_e_1);
+			if(mk0.c_e_1 ==	E_1)	$fwrite(file, " E_1 : SUCCESS\n\n");
+			else			$fwrite(file, " E_1 : FAIL\n\n");
+		end
+	end	
+
+
+	// Parse result
+	always @(posedge mk0.Parse_out_done)
+	begin
+	temp_cnt_Parse=mk0.c_cnt_Parse;
+	#15;
+		if(temp_cnt_Parse==2'd0)
+		begin
+		$fwrite(file, "A_00 sampled from Parse :\n %h\n", mk0.c_A_0);
+			if(mk0.c_A_0 ==	A_00)	$fwrite(file, " A_00 : SUCCESS\n\n");
+			else			$fwrite(file, " A_00 : FAIL\n\n");		
+		end
+		else if(temp_cnt_Parse==2'd1)
+		begin
+		$fwrite(file, "A_01 sampled from Parse :\n %h\n", mk0.c_A_1);
+			if(mk0.c_A_1 ==	A_01)	$fwrite(file, " A_01 : SUCCESS\n\n");
+			else			$fwrite(file, " A_01 : FAIL\n\n");	
+		end
+		else if(temp_cnt_Parse==2'd2)
+		begin
+		$fwrite(file, "A_10 sampled from Parse :\n %h\n", mk0.c_A_0);
+			if(mk0.c_A_0 ==	A_10)	$fwrite(file, " A_10 : SUCCESS\n\n");
+			else			$fwrite(file, " A_10 : FAIL\n\n");	
+		end
+		else
+		begin
+		$fwrite(file, "A_11 sampled from Parse :\n %h\n", mk0.c_A_1);
+			if(mk0.c_A_1 ==	A_11)	$fwrite(file, " A_11 : SUCCESS\n\n");
+			else			$fwrite(file, " A_11 : FAIL\n\n");
+		end
+	end	
+	
+
+	// NTT result
+	always @(posedge mk0.NTT_out_done)
+	begin
+	temp_cnt_NTT=mk0.c_cnt_NTT;
+	#15;
+		if(temp_cnt_NTT==2'd0)
+		begin
+		$fwrite(file, "SecretKey_0 after NTT :\n %h\n", mk0.c_s_0);
+			if(mk0.c_s_0 ==	S_NTT_0)	$fwrite(file, " S_NTT_0 : SUCCESS\n\n");
+			else				$fwrite(file, " S_NTT_0 : FAIL\n\n");		
+		end
+		else if(temp_cnt_NTT==2'd1)
+		begin
+		$fwrite(file, "SecretKey_1 after NTT :\n %h\n", mk0.c_s_1);
+			if(mk0.c_s_1 ==	S_NTT_1)	$fwrite(file, " S_NTT_1 : SUCCESS\n\n");
+			else				$fwrite(file, " S_NTT_1 : FAIL\n\n");	
+		end
+		else if(temp_cnt_NTT==2'd2)
+		begin
+		$fwrite(file, "Error_0 after NTT :\n %h\n", mk0.c_e_0);
+			if(mk0.c_e_0 ==	E_NTT_0)	$fwrite(file, " E_NTT_0 : SUCCESS\n\n");
+			else				$fwrite(file, " E_NTT_0 : FAIL\n\n");	
+		end
+		else
+		begin
+		$fwrite(file, "Error_1 after NTT :\n %h\n", mk0.c_e_1);
+			if(mk0.c_e_1 ==	E_NTT_1)	$fwrite(file, " E_NTT_1 : SUCCESS\n\n");
+			else				$fwrite(file, " E_NTT_1 : FAIL\n\n");
+		end
+	end	
+
+	// Basemul & Add
+	always @(posedge mk0.Add_done)
+	begin
+	temp_cnt_Add=mk0.c_cnt_Add;
+	#15;
+		if(temp_cnt_Add==2'd1)
+		begin
+		$fwrite(file, "PublicKey_0 after Basemul&Add :\n %h\n", mk0.c_result_0);
+			if(mk0.c_result_0 == PK_0)	$fwrite(file, " PK_0 : SUCCESS\n\n");
+			else				$fwrite(file, " PK_0 : FAIL\n\n");
+		end
+		else if(temp_cnt_Add==2'd3)
+		begin
+		$fwrite(file, "PublicKey_1 after Basemul&Add :\n %h\n", mk0.c_result_1);
+			if(mk0.c_result_1 == PK_1)	$fwrite(file, " PK_1 : SUCCESS\n\n");
+			else				$fwrite(file, " PK_1 : FAIL\n\n");
+		end
+
+	end
+
+
+
+endmodule

@@ -1,0 +1,113 @@
+C:/test_for_kyber512/butterfly_unit.v {1 {vlog -work work -vopt -stats=none C:/test_for_kyber512/butterfly_unit.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module butterfly_unit
+
+Top level modules:
+	butterfly_unit
+
+} {} {}} C:/test_for_kyber512/CBD.v {1 {vlog -work work -vopt -stats=none C:/test_for_kyber512/CBD.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module CBD
+
+Top level modules:
+	CBD
+
+} {} {}} C:/test_for_kyber512/Parse.v {1 {vlog -work work -vopt -stats=none C:/test_for_kyber512/Parse.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module Parse
+
+Top level modules:
+	Parse
+
+} {} {}} C:/test_for_kyber512/barrett.v {1 {vlog -work work -vopt -stats=none C:/test_for_kyber512/barrett.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module barrett
+
+Top level modules:
+	barrett
+
+} {} {}} C:/test_for_kyber512/montgomery_unsigned.v {1 {vlog -work work -vopt -stats=none C:/test_for_kyber512/montgomery_unsigned.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module montgomery
+
+Top level modules:
+	montgomery
+
+} {} {}} C:/test_for_kyber512/montgomery_temp.v {1 {vlog -work work -vopt -stats=none C:/test_for_kyber512/montgomery_temp.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module montgomery_temp
+
+Top level modules:
+	montgomery_temp
+
+} {} {}} C:/test_for_kyber512/selector.v {1 {vlog -work work -vopt -stats=none C:/test_for_kyber512/selector.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module selector
+
+Top level modules:
+	selector
+
+} {} {}} C:/test_for_kyber512/basemul.v {1 {vlog -work work -vopt -stats=none C:/test_for_kyber512/basemul.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module basemul
+
+Top level modules:
+	basemul
+
+} {} {}} C:/test_for_kyber512/G_func.v {1 {vlog -work work -vopt -stats=none C:/test_for_kyber512/G_func.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module G_func
+
+Top level modules:
+	G_func
+
+} {} {}} C:/test_for_kyber512/KECCAK.v {1 {vlog -work work -vopt -stats=none C:/test_for_kyber512/KECCAK.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module KECCAK
+
+Top level modules:
+	KECCAK
+
+} {} {}} C:/test_for_kyber512/basemul_TOP.v {1 {vlog -work work -vopt -stats=none C:/test_for_kyber512/basemul_TOP.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module Basemul_TOP
+
+Top level modules:
+	Basemul_TOP
+
+} {} {}} C:/test_for_kyber512/tb_test_all_0.v {1 {vlog -work work -vopt -stats=none C:/test_for_kyber512/tb_test_all_0.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module tb_TOP_KEYGEN
+
+Top level modules:
+	tb_TOP_KEYGEN
+
+} {} {}} C:/test_for_kyber512/selector_zeta.v {1 {vlog -work work -vopt -stats=none C:/test_for_kyber512/selector_zeta.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module selector_zeta
+
+Top level modules:
+	selector_zeta
+
+} {} {}} C:/test_for_kyber512/hash.v {1 {vlog -work work -vopt -stats=none C:/test_for_kyber512/hash.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module hash
+
+Top level modules:
+	hash
+
+} {} {}} C:/test_for_kyber512/TOP_KEYGEN.v {1 {vlog -work work -vopt -stats=none C:/test_for_kyber512/TOP_KEYGEN.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module TOP_KEYGEN
+
+Top level modules:
+	TOP_KEYGEN
+
+} {} {}} C:/test_for_kyber512/NTT.v {1 {vlog -work work -vopt -stats=none {C:\test_for_kyber512\NTT.v}
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module NTT
+
+Top level modules:
+	NTT
+
+} {} {}}

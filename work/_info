@@ -1,0 +1,454 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/test_for_kyber512
+T_opt
+!s110 1757875598
+V2cWWh_?aGC>W;c@hVOH_S1
+04 13 4 work tb_TOP_KEYGEN fast 0
+=1-10ffe02cf17e-68c70d8e-1fe-55c8
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.5;63
+vbarrett
+Z2 !s110 1757875593
+!i10b 1
+!s100 ER;a]kK;E;[3RSjRJAK=`0
+I_60WF5AMmSSZ_T6dj;oa82
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1724557192
+8C:/test_for_kyber512/barrett.v
+FC:/test_for_kyber512/barrett.v
+L0 1
+Z4 OL;L;10.5;63
+r1
+!s85 0
+31
+Z5 !s108 1757875593.000000
+!s107 C:/test_for_kyber512/barrett.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/test_for_kyber512/barrett.v|
+!i113 0
+Z6 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vbasemul
+R2
+!i10b 1
+!s100 HW=?Bg63b;aChhd;<2YBA2
+IIB]UAi?K=Yb^<bzFeOfnh3
+R3
+R0
+w1725005446
+8C:/test_for_kyber512/basemul.v
+FC:/test_for_kyber512/basemul.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/test_for_kyber512/basemul.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/test_for_kyber512/basemul.v|
+!i113 0
+R6
+R1
+vBasemul_TOP
+R2
+!i10b 1
+!s100 P15a2KjDnjl=2TId>PWz<1
+I:L2BLJ`l9aOZ]^K0ioU5?0
+R3
+R0
+w1757844785
+Z7 8C:/test_for_kyber512/basemul_TOP.v
+Z8 FC:/test_for_kyber512/basemul_TOP.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+Z9 !s107 C:/test_for_kyber512/basemul_TOP.v|
+Z10 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/test_for_kyber512/basemul_TOP.v|
+!i113 0
+R6
+R1
+n@basemul_@t@o@p
+vbasemul_TOP
+Z11 !s110 1757844735
+!i10b 1
+!s100 =fK<59WbnK88l=UX5m67]2
+IJkUEc3Ki^^gl3Q_cS<nIX3
+R3
+R0
+w1724580958
+R7
+R8
+L0 1
+R4
+r1
+!s85 0
+31
+Z12 !s108 1757844735.000000
+R9
+R10
+!i113 0
+R6
+R1
+nbasemul_@t@o@p
+vbutterfly_unit
+R2
+!i10b 1
+!s100 n0fo5g;<J3jY:k63U6eOT0
+IInJ<g1?Fko>AgVHh`clLZ3
+R3
+R0
+w1757866103
+8C:/test_for_kyber512/butterfly_unit.v
+FC:/test_for_kyber512/butterfly_unit.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/test_for_kyber512/butterfly_unit.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/test_for_kyber512/butterfly_unit.v|
+!i113 0
+R6
+R1
+vCBD
+R2
+!i10b 1
+!s100 DozSRM;T6ARa6l0n>Bc@b2
+I>8Mlg=o6]?V:0RTaOz=nV0
+R3
+R0
+w1730262260
+8C:/test_for_kyber512/CBD.v
+FC:/test_for_kyber512/CBD.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/test_for_kyber512/CBD.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/test_for_kyber512/CBD.v|
+!i113 0
+R6
+R1
+n@c@b@d
+vG_func
+R2
+!i10b 1
+!s100 A]]c]R_g;@QP:F_>YOeX]1
+IAP_@aMZ5KVcmNmZZjH^VM2
+R3
+R0
+Z13 w1730262261
+8C:/test_for_kyber512/G_func.v
+FC:/test_for_kyber512/G_func.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/test_for_kyber512/G_func.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/test_for_kyber512/G_func.v|
+!i113 0
+R6
+R1
+n@g_func
+vhash
+R2
+!i10b 1
+!s100 11D:Az6<4l>CCjN;lmS0b3
+Ik5R[l<?FJiQD2EiSd0Tzk2
+R3
+R0
+R13
+8C:/test_for_kyber512/hash.v
+FC:/test_for_kyber512/hash.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/test_for_kyber512/hash.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/test_for_kyber512/hash.v|
+!i113 0
+R6
+R1
+vKECCAK
+R2
+!i10b 1
+!s100 1`82k;]IOMgQN:H:;aACO1
+I>]zPA9f;@g4@@hGPD1OF81
+R3
+R0
+w1730262265
+8C:/test_for_kyber512/KECCAK.v
+FC:/test_for_kyber512/KECCAK.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/test_for_kyber512/KECCAK.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/test_for_kyber512/KECCAK.v|
+!i113 0
+R6
+R1
+n@k@e@c@c@a@k
+vmontgomery
+R2
+!i10b 1
+!s100 KCk1X]3UCRc@ZTS3nf9=e1
+IFjS[J40KILnSVBb]^zD>T0
+R3
+R0
+w1723789746
+8C:/test_for_kyber512/montgomery_unsigned.v
+FC:/test_for_kyber512/montgomery_unsigned.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/test_for_kyber512/montgomery_unsigned.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/test_for_kyber512/montgomery_unsigned.v|
+!i113 0
+R6
+R1
+vmontgomery_temp
+R2
+!i10b 1
+!s100 ^Y0SS[l3EEmn[KzkA507B2
+IiHlD2j=^We6Pn^>XC8kPH1
+R3
+R0
+w1725605785
+8C:/test_for_kyber512/montgomery_temp.v
+FC:/test_for_kyber512/montgomery_temp.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/test_for_kyber512/montgomery_temp.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/test_for_kyber512/montgomery_temp.v|
+!i113 0
+R6
+R1
+vntt
+R11
+!i10b 1
+!s100 3L4CV?lN];SXZI<zdSnAe0
+IT;e4fAS<nnc=5W?n[k5a81
+R3
+R0
+w1724072010
+8C:/test_for_kyber512/NTT.v
+FC:/test_for_kyber512/NTT.v
+L0 1
+R4
+r1
+!s85 0
+31
+R12
+!s107 C:/test_for_kyber512/NTT.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/test_for_kyber512/NTT.v|
+!i113 0
+R6
+R1
+vNTT
+R2
+!i10b 1
+!s100 Bm:4070B_CX]Jhdgh@D0d0
+ITbedSAj;_n3QUHNlN;mgR3
+R3
+R0
+w1757868259
+8C:\test_for_kyber512\NTT.v
+FC:\test_for_kyber512\NTT.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:\test_for_kyber512\NTT.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:\test_for_kyber512\NTT.v|
+!i113 0
+R6
+R1
+n@n@t@t
+vParse
+R2
+!i10b 1
+!s100 1^ob_eDV4gY=PfIlAMjNL0
+IL`0KNE7@TQ^jGjYA8Dji11
+R3
+R0
+w1730262266
+8C:/test_for_kyber512/Parse.v
+FC:/test_for_kyber512/Parse.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/test_for_kyber512/Parse.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/test_for_kyber512/Parse.v|
+!i113 0
+R6
+R1
+n@parse
+vSasemul_TOP
+!s110 1757843120
+!i10b 1
+!s100 <DY7J_:?4L]F>E[5lUR@U2
+Z14 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IS`OL9Je[Hf0NM>ODIXU9o0
+R3
+R0
+w1757843102
+R7
+R8
+!i122 111
+L0 1 145
+Z15 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1757843120.000000
+R9
+!s90 -reportprogress|300|-work|work|C:/test_for_kyber512/basemul_TOP.v|
+!i113 1
+Z16 o-work work
+R1
+n@sasemul_@t@o@p
+vselector
+R2
+!i10b 1
+!s100 KbBS=e:zCPCLn5_F46[XU1
+IE[c6d_X7iFf8F@ZODd6@@1
+R3
+R0
+w1757875571
+8C:/test_for_kyber512/selector.v
+FC:/test_for_kyber512/selector.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/test_for_kyber512/selector.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/test_for_kyber512/selector.v|
+!i113 0
+R6
+R1
+vselector_zeta
+R2
+!i10b 1
+!s100 oLOH0DD7KToi1Zh3:Ublf3
+Ia>1cEB=a:^<f8VQClb;Wi2
+R3
+R0
+w1757875584
+8C:/test_for_kyber512/selector_zeta.v
+FC:/test_for_kyber512/selector_zeta.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/test_for_kyber512/selector_zeta.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/test_for_kyber512/selector_zeta.v|
+!i113 0
+R6
+R1
+vtb_butterfly
+!s110 1757843356
+!i10b 1
+!s100 [DHCRXcmcFmOBdX4nd[Z60
+R14
+ImQj[Ndo8:GjQ[F==KLPYQ1
+R3
+R0
+w1719570016
+8C:/test_for_kyber512/tb_butterfly.v
+FC:/test_for_kyber512/tb_butterfly.v
+!i122 160
+L0 1 19
+R15
+r1
+!s85 0
+31
+!s108 1757843356.000000
+!s107 C:/test_for_kyber512/tb_butterfly.v|
+!s90 -reportprogress|300|-work|work|C:/test_for_kyber512/tb_butterfly.v|
+!i113 1
+R16
+R1
+vtb_TOP_KEYGEN
+!s110 1757875594
+!i10b 1
+!s100 7S:nJ?jZb4]PJ[E71fDOW3
+I_=c]Bz=<c>Oh8>a^0ZRH73
+R3
+R0
+w1757869393
+8C:/test_for_kyber512/tb_test_all_0.v
+FC:/test_for_kyber512/tb_test_all_0.v
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/test_for_kyber512/tb_test_all_0.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/test_for_kyber512/tb_test_all_0.v|
+!i113 0
+R6
+R1
+ntb_@t@o@p_@k@e@y@g@e@n
+vTOP_KEYGEN
+R2
+!i10b 1
+!s100 86hiV=gQOSe5ZT2ffO58e0
+I1X7cNP27ke<Wc:646i^Xa1
+R3
+R0
+w1730262267
+8C:/test_for_kyber512/TOP_KEYGEN.v
+FC:/test_for_kyber512/TOP_KEYGEN.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/test_for_kyber512/TOP_KEYGEN.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/test_for_kyber512/TOP_KEYGEN.v|
+!i113 0
+R6
+R1
+n@t@o@p_@k@e@y@g@e@n

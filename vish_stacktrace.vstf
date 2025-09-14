@@ -1,0 +1,46 @@
+# Current time Sun Sep 14 22:05:07 2025
+# ModelSim SE Stack Trace
+# Program = vish
+# Id = "10.5"
+# Version = "2016.02"
+# Date = "Feb 13 2016"
+# Platform = win64
+
+Exception c0000005 has occurred at address 402d8934. Traceback:
+# 0    0x402d8934: 'Mtirpc_Init + 0x12c584'
+# 1    0x402e43f4: 'Mtirpc_Init + 0x138044'
+# 2    0x402e5a18: 'Mtirpc_Init + 0x139668'
+# 3    0x402e5bc2: 'Mtirpc_Init + 0x139812'
+# 4    0x5b550e9d: 'Tcl_ListMathFuncs + 0x59d'
+# 5    0x5b595b92: 'Tcl_ExprObj + 0x1922'
+# 6    0x5b5948a0: 'Tcl_ExprObj + 0x630'
+# 7    0x5b552bb6: 'TclEvalObjEx + 0x3b6'
+# 8    0x5b5527ed: 'Tcl_EvalObjEx + 0x1d'
+# 9    0x6ceec032: 'Itcl_EvalMemberCode + 0x222'
+# 10   0x6ceec2e1: 'Itcl_ExecMethod + 0x181'
+# 11   0x6cef0043: 'Itcl_EvalArgs + 0x103'
+# 12   0x6ceedfe3: 'Itcl_HandleInstance + 0x193'
+# 13   0x5b550e9d: 'Tcl_ListMathFuncs + 0x59d'
+# 14   0x5b595b92: 'Tcl_ExprObj + 0x1922'
+# 15   0x5b5df8a4: 'TclObjInterpProcCore + 0x74'
+# 16   0x5b550e9d: 'Tcl_ListMathFuncs + 0x59d'
+# 17   0x5b551341: 'Tcl_EvalObjv + 0x51'
+# 18   0x5b552958: 'TclEvalObjEx + 0x158'
+# 19   0x5b5527ed: 'Tcl_EvalObjEx + 0x1d'
+# 20   0x40188851: 'Sqlite_SafeUnload + 0x1106c1'
+# 21   0x401872e5: 'Sqlite_SafeUnload + 0x10f155'
+# 22   0x4018738d: 'Sqlite_SafeUnload + 0x10f1fd'
+# 23   0x4018082d: 'Sqlite_SafeUnload + 0x10869d'
+# 24   0x40180658: 'Sqlite_SafeUnload + 0x1084c8'
+# 25   0x5b5f1fac: 'TclServiceIdle + 0x6c'
+# 26   0x5b5cf1c8: 'Tcl_DoOneEvent + 0x178'
+# 27   0x5b402ee5: 'Tk_MainLoop + 0x25'
+# 28   0x5b43a414: 'Tk_MainEx + 0x984'
+# 29   0x401cddbb: 'Mtirpc_Init + 0x21a0b'
+# 30   0x401d032a: 'Mtirpc_Init + 0x23f7a'
+# 31   0x405d445b: 'Tclsqlite_Init + 0x1a2b'
+# 32   0x76f87374: 'BaseThreadInitThunk + 0x14'
+# 33   0x7821cc91: 'RtlUserThreadStart + 0x21'
+StackWalk failed 0
+# End of Stack Trace
+
